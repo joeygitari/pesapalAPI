@@ -34,7 +34,6 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
 ```
 
 ## Configuration
-`PesaPal::config( $env, $consumer_key, $consumer_secret, $callback_url );`
 
 ### Authentication Request Sample
 
