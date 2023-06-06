@@ -43,8 +43,8 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     --header 'Content-Type: application/json' \
     --header 'Accept: application/json' \
     --data '{
-    "consumer_key": "xxx", ;; Get the consumer key from your pesapal account
-    "consumer_secret": "xxx" ;; Get the consumer key from your pesapal account
+        "consumer_key": "xxx", ;; Get the consumer key from your pesapal account
+        "consumer_secret": "xxx" ;; Get the consumer key from your pesapal account
     }'
     ```
 
@@ -52,11 +52,11 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
 
     ```json
     {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoiZWQ2MTkwMGYtZGNiMy00NjM2LWIxNGUtY2U1MGQwYzk2M2I1IiwidWlkIjoicWtpbzFCR0dZQVhUdTJKT2ZtN1hTWE5ydW9ac3JxRVciLCJuYmYiOjE2ODYwNDgzNzAsImV4cCI6MTY4NjA1MTk3MCwiaWF0IjoxNjg2MDQ4MzcwLCJpc3MiOiJodHRwOi8vY3licWEucGVzYXBhbC5jb20vIiwiYXVkIjoiaHR0cDovL2N5YnFhLnBlc2FwYWwuY29tLyJ9.sP1b2RLrgjzs3EQlJrGE00oIbZu1doSvbkL2J7ZbHjc",
-    "expiryDate": "2023-06-06T11:46:10.0883013Z",
-    "error": null,
-    "status": "200",
-    "message": "Request processed successfully"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoiZWQ2MTkwMGYtZGNiMy00NjM2LWIxNGUtY2U1MGQwYzk2M2I1IiwidWlkIjoicWtpbzFCR0dZQVhUdTJKT2ZtN1hTWE5ydW9ac3JxRVciLCJuYmYiOjE2ODYwNDgzNzAsImV4cCI6MTY4NjA1MTk3MCwiaWF0IjoxNjg2MDQ4MzcwLCJpc3MiOiJodHRwOi8vY3licWEucGVzYXBhbC5jb20vIiwiYXVkIjoiaHR0cDovL2N5YnFhLnBlc2FwYWwuY29tLyJ9.sP1b2RLrgjzs3EQlJrGE00oIbZu1doSvbkL2J7ZbHjc",
+        "expiryDate": "2023-06-06T11:46:10.0883013Z",
+        "error": null,
+        "status": "200",
+        "message": "Request processed successfully"
     }
     ```
 
@@ -68,8 +68,8 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer $token' \
     --data '{
-    "url": env('APP_URL')."/ipn",
-    "ipn_notification_type": "POST"
+        "url": env('APP_URL')."/ipn",
+        "ipn_notification_type": "POST"
     }'
     ```
 
@@ -77,11 +77,11 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
 
     ```json
     {
-    "url": "https://www.myapplication.com/ipn",
-    "created_date": "2022-03-03T17:29:03.7208266Z",
-    "ipn_id": "e32182ca-0983-4fa0-91bc-c3bb813ba750",
-    "error": null,
-    "status": "200"
+        "url": "https://www.myapplication.com/ipn",
+        "created_date": "2022-03-03T17:29:03.7208266Z",
+        "ipn_id": "e32182ca-0983-4fa0-91bc-c3bb813ba750",
+        "error": null,
+        "status": "200"
     }
     ```
 
@@ -95,25 +95,25 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer $token' \
     --data-raw '{
-    "id": "TEST1515111110",
-    "currency": "KES",
-    "amount": 100.00,
-    "description": "Payment description ",
-    "callback_url": "https://www.myapplication.com/response-page",
-    "notification_id": "fe078e53-78da-4a83-aa89-e7ded5c456e6",
-    "billing_address": {
-        "email_address": "john.doe@example.com",
-        "phone_number": null,
-        "country_code": "",
-        "first_name": "John",
-        "middle_name": "",
-        "last_name": "Doe",
-        "line_1": "",
-        "line_2": "",
-        "city": "",
-        "state": "",
-        "postal_code": null,
-        "zip_code": null
+        "id": "TEST1515111110",
+        "currency": "KES",
+        "amount": 100.00,
+        "description": "Payment description ",
+        "callback_url": "https://www.myapplication.com/response-page",
+        "notification_id": "fe078e53-78da-4a83-aa89-e7ded5c456e6",
+        "billing_address": {
+            "email_address": "john.doe@example.com",
+            "phone_number": null,
+            "country_code": "",
+            "first_name": "John",
+            "middle_name": "",
+            "last_name": "Doe",
+            "line_1": "",
+            "line_2": "",
+            "city": "",
+            "state": "",
+            "postal_code": null,
+            "zip_code": null
     }
     }'
     ```
@@ -124,11 +124,11 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
 
     ```json
     {
-    "order_tracking_id": "b945e4af-80a5-4ec1-8706-e03f8332fb04",
-    "merchant_reference": "TEST1515111119",
-    "redirect_url": "https://cybqa.pesapal.com/pesapaliframe/PesapalIframe3/Index/?OrderTrackingId=b945e4af-80a5-4ec1-8706-e03f8332fb04",
-    "error": null,
-    "status": "200"
+        "order_tracking_id": "b945e4af-80a5-4ec1-8706-e03f8332fb04",
+        "merchant_reference": "TEST1515111119",
+        "redirect_url": "https://cybqa.pesapal.com/pesapaliframe/PesapalIframe3/Index/?OrderTrackingId=b945e4af-80a5-4ec1-8706-e03f8332fb04",
+        "error": null,
+        "status": "200"
     }
     ```
 
@@ -145,26 +145,26 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
 
     ```json
     {
-    "payment_method": "Visa",
-    "amount": 100,
-    "created_date": "2022-04-30T07:41:09.763",
-    "confirmation_code": "6513008693186320103009",
-    "payment_status_description": "Failed",
-    "description": "Unable to Authorize Transaction.Kindly contact your bank for assistance",
-    "message": "Request processed successfully",
-    "payment_account": "476173**0010",
-    "call_back_url": "https://test.com/?OrderTrackingId=7e6b62d9-883e-440f-a63e-e1105bbfadc3&OrderMerchantReference=1515111111",
-    "status_code": 2,
-    "merchant_reference": "1515111111",
-    "payment_status_code": "",
-    "currency": "KES",
-    "error": {
-        "error_type": null,
-        "code": null,
-        "message": null,
-        "call_back_url": null
+        "payment_method": "Visa",
+        "amount": 100,
+        "created_date": "2022-04-30T07:41:09.763",
+        "confirmation_code": "6513008693186320103009",
+        "payment_status_description": "Failed",
+        "description": "Unable to Authorize Transaction.Kindly contact your bank for assistance",
+        "message": "Request processed successfully",
+        "payment_account": "476173**0010",
+        "call_back_url": "https://test.com/?OrderTrackingId=7e6b62d9-883e-440f-a63e-e1105bbfadc3&OrderMerchantReference=1515111111",
+        "status_code": 2,
+        "merchant_reference": "1515111111",
+        "payment_status_code": "",
+        "currency": "KES",
+        "error": {
+            "error_type": null,
+            "code": null,
+            "message": null,
+            "call_back_url": null
     },
-    "status": "200"
+        "status": "200"
     }
     ```
 
@@ -176,10 +176,10 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
 
     ```json
     {
-    "orderNotificationType": "IPNCHANGE",
-    "orderTrackingId": "d0fa69d6-f3cd-433b-858e-df86555b86c8",
-    "orderMerchantReference": "1515111111",
-    "status": 200
+        "orderNotificationType": "IPNCHANGE",
+        "orderTrackingId": "d0fa69d6-f3cd-433b-858e-df86555b86c8",
+        "orderMerchantReference": "1515111111",
+        "status": 200
     }
     ```
     To list all the callbacks registered with PesaPal, you can make a Get IPN LIST request as follows:
@@ -195,20 +195,20 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
 
     ```json
     [
-    {
-        "url": "https://www.myapplication.com/ipn",
-        "created_date": "2022-03-03T17:29:03.7208266Z",
-        "ipn_id": "e32182ca-0983-4fa0-91bc-c3bb813ba750",
-        "error": null,
-        "status": "200"
-    },
-    {
-        "url": "https://ipn.myapplication.com/application2",
-        "created_date": "2021-12-05T04:23:45.5509243Z",
-        "ipn_id": "c3bb813ba750-0983-4fa0-91bc-e32182ca",
-        "error": null,
-        "status": "200"
-    }
+        {
+            "url": "https://www.myapplication.com/ipn",
+            "created_date": "2022-03-03T17:29:03.7208266Z",
+            "ipn_id": "e32182ca-0983-4fa0-91bc-c3bb813ba750",
+            "error": null,
+            "status": "200"
+        },
+        {
+            "url": "https://ipn.myapplication.com/application2",
+            "created_date": "2021-12-05T04:23:45.5509243Z",
+            "ipn_id": "c3bb813ba750-0983-4fa0-91bc-e32182ca",
+            "error": null,
+            "status": "200"
+        }
     ]
     ```
 
