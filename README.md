@@ -86,6 +86,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     ```
 
 Generate IPN Registration Implementation. On successful registration, receive the response payload and extract "ipn_id" to store it in the database.  
+
 Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will be used when submitting orders.  
 
 ### Order Submission Request Sample
@@ -118,9 +119,9 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
     }'
     ```
 
-    Note: The "notification_id" field in the request is where the stored "ipn_id" goes. 
+Note: The "notification_id" field in the request is where the stored "ipn_id" goes. 
 
-    Generate a migration to store Order Submission Response:
+Generate a migration to store Order Submission Response:
 
     ```json
     {
@@ -132,7 +133,7 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
     }
     ```
 
-    Implement Get Transaction Status Request as follows:
+Implement Get Transaction Status Request as follows:
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/Transactions/GetTransactionStatus?orderTrackingId=xxxxxxxxxxxxxx' \
@@ -168,11 +169,11 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
     }
     ```
 
-    Implement the following on IPN Callback:
+Implement the following on IPN Callback:
 
-    Receive payload from PesaPal and extract "orderMerchantReference". Search the order and update it with the "orderTrackingId" from the response as below:
+Receive payload from PesaPal and extract "orderMerchantReference". Search the order and update it with the "orderTrackingId" from the response as below:
 
-    Sample Payload to Registered IPN Callback:
+Sample Payload to Registered IPN Callback:
 
     ```json
     {
@@ -182,7 +183,7 @@ Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will 
         "status": 200
     }
     ```
-    To list all the callbacks registered with PesaPal, you can make a Get IPN LIST request as follows:
+To list all the callbacks registered with PesaPal, you can make a Get IPN LIST request as follows:
 
 ### Get IPN LIST Request Sample
 
@@ -223,5 +224,5 @@ For any contributions contact:
 
 # License 
 
-Copyright (c) 2023
+Copyright ©️ 2023
 
