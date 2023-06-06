@@ -36,7 +36,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
 ## Configuration
 `PesaPal::config( $env, $consumer_key, $consumer_secret, $callback_url );`
 
-    ### Authentication Request Sample
+### Authentication Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/Auth/RequestToken' \
@@ -48,7 +48,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }'
     ```
 
-    #### Authentication Response Sample
+#### Authentication Response Sample
 
     ```json
     {
@@ -60,7 +60,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }
     ```
 
-    ### IPN Registration Request
+### IPN Registration Request
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/URLSetup/RegisterIPN' \
@@ -73,7 +73,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }'
     ```
 
-    #### IPN Registration Response
+#### IPN Registration Response
 
     ```json
     {
@@ -85,10 +85,10 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }
     ```
 
-a) Generate IPN Registration Implementation. On successful registration, receive the response payload and extract "ipn_id" to store it in the database.  
-b) Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will be used when submitting orders.  
+Generate IPN Registration Implementation. On successful registration, receive the response payload and extract "ipn_id" to store it in the database.  
+Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will be used when submitting orders.  
 
-    ### Order Submission Request Sample
+### Order Submission Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/Transactions/SubmitOrderRequest' \
@@ -141,7 +141,7 @@ b) Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" wi
     --header 'Authorization: Bearer <token>'
     ```
 
-    ### Transaction Status Response
+### Transaction Status Response
 
     ```json
     {
@@ -184,14 +184,14 @@ b) Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" wi
     ```
     To list all the callbacks registered with PesaPal, you can make a Get IPN LIST request as follows:
 
-    ### Get IPN LIST Request Sample
+### Get IPN LIST Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/apiURLSetup/GetIpnList' \
     --header 'Authorization: Bearer <token>'
     ```
 
-    ### IPN LIST Response
+### IPN LIST Response
 
     ```json
     [
