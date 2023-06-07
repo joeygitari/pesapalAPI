@@ -9,18 +9,110 @@
 	<meta name="author" content="Pesapal">
     <meta name="description" content=""> 
     <title>PesaPal</title>
-	
-	<!-- Style Sheets -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link href="css/style_forms_validation.css" rel="stylesheet" type="text/css">
     <script src="js/ga.js" async type="text/javascript"></script><script src="js/jquery_002.js"></script>
     
+	<?php
+    $sitelink = 'http://localhost:8080/PesaPal/index.php';
+?>
 
-<style id="css-ddslick" type="text/css">.dd-select{ position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:7px 5px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:5px; top:50%; margin-top:-3px;}.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}.dd-option{ padding:7px 5px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options > li:last-child > .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#f6f6f6; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}​ .dd-selected-text { font-weight:bold}​</style></head>
-<body data-menu-position="closed" id="bd">
+<style>
+*{
+    margin:0;
+    padding:o; 
+} 
+
+body{
+    background-color: #5995fd;
+    background-position: centre;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+}
+
+.transform{
+    width:800px;
+    background-color: black; 
+    margin:auto;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main{
+    background-color: rgb(0,0,0,0.5); 
+    width:800px;
+    margin:auto;
+}
+
+form{
+    padding:10px;
+}
+
+#name{
+    width: 100%;
+    height:100px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.Input{
+    position: relative;
+    left: 200px;
+    top: -35px;
+    line-height: 40px;
+    width: 500px;
+    border-radius: 6px;
+    padding:0 22px;
+    font-size: 15px;
+    color: #555;
+    
+}
+
+.Amount{
+    position: relative;
+    left: 200px;
+    line-height: 40px;
+    width: 500px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 15px;
+    color: #555;
+    top: -35px;
+}
+
+
+.btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    background-color: #4d84e2;
+  }
+</style>
+
+</head>
+
+<!-- <body data-menu-position="closed" id="bd">
 <div style="position: relative; left: 0px;" class="jPanelMenu-panel"><div><div id="pp-wrapper">
 <a id="top"></a>
 	<header>
@@ -40,4 +132,4 @@
 	<section id="main">
         <div id="pp-main">
 		    <div id="pp-content" class="">
-    	        <div class="container ">
+    	        <div class="container "> -->

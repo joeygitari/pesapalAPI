@@ -30,13 +30,12 @@
     
     // <b>Status: </b> <?php echo $status->payment_status_description 
 ?>
-<h3>Callback return URl</h3>
-<div class="row-fluid">
-	<div class="span6">
-        <b>Payment received successfully</b>
-        <blockquote>
-         	<b>Order Tracking ID: </b> <?php echo $orderTrackingId; ?><br />
-         	<b>Status: </b> <?php echo $status->payment_status_description; ?><br /> 
-        </blockquote>
-    </div>
+<h2 class="transform">Callback return URL</h2>
+<div class="main" style = "height:125px">
+        <b>Payment received successfully</b> <br />
+        <br />
+        <b>Order Tracking ID: </b> <?php echo $orderTrackingId; ?><br />
+        <br />
+        <b>Status: </b> <?php echo $status->payment_status_description; ?><br />  
+   
 </div>
