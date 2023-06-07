@@ -213,15 +213,15 @@ To list all the callbacks registered with PesaPal, you can make a Get IPN LIST r
 # Results
 ## Some screenshots
 
-* Registration form
+* Registration form <br/>
 ![Form Image](test_images/registration-form.png)
 <br/>
 
-* PesaPal payment form - PesaPal payment process is followed till the end
+* PesaPal payment form - PesaPal payment process is followed till the end <br/>
 ![pesapal Image](test_images/payment-form.png)
 <br/>
 
-* The Callback after payment
+* The Callback after payment <br/>
 ![callback Image](test_images/callback.png)
 <br/>
 
