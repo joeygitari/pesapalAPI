@@ -10,9 +10,7 @@ This API allows you to get the Pesapal iframe URL by consuming the Pesapal API v
 * Git
 * Github
 * PHP
-* MySql
 * PesaPal API v3.0
-* Postman 
 
 ## Setup Installation
 
@@ -33,9 +31,9 @@ $ cd pesapal-API
 https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
 ```
 
-## Configuration
+# PesaPal API process
 
-### Authentication Request Sample
+## Authentication Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/Auth/RequestToken' \
@@ -47,7 +45,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }'
     ```
 
-#### Authentication Response Sample
+### Authentication Response Sample
 
     ```json
     {
@@ -59,7 +57,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }
     ```
 
-### IPN Registration Request
+## IPN Registration Request
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/URLSetup/RegisterIPN' \
@@ -72,7 +70,7 @@ https://developer.pesapal.com/how-to-integrate/api-30-json/api-reference
     }'
     ```
 
-#### IPN Registration Response
+### IPN Registration Response
 
     ```json
     {
@@ -88,7 +86,7 @@ Generate IPN Registration Implementation. On successful registration, receive th
 
 Create a method for retrieving the stored "ipn_id". Remember, the "ipn_id" will be used when submitting orders.  
 
-### Order Submission Request Sample
+## Order Submission Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/api/Transactions/SubmitOrderRequest' \
@@ -184,7 +182,7 @@ Sample Payload to Registered IPN Callback:
     ```
 To list all the callbacks registered with PesaPal, you can make a Get IPN LIST request as follows:
 
-### Get IPN LIST Request Sample
+## Get IPN LIST Request Sample
 
     ```bash
     curl --location 'https://cybqa.pesapal.com/pesapalv3/apiURLSetup/GetIpnList' \
@@ -211,6 +209,21 @@ To list all the callbacks registered with PesaPal, you can make a Get IPN LIST r
         }
     ]
     ```
+
+# Results
+## Some screenshots
+
+* Registration form
+![Form Image](test_images/registration-form.png)
+<br/>
+
+* PesaPal payment form - PesaPal payment process is followed till the end
+![pesapal Image](test_images/payment-form.png)
+<br/>
+
+* The Callback after payment
+![callback Image](test_images/callback.png)
+<br/>
 
 ## Known bugs
 There are no known bugs at the moment.
