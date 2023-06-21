@@ -111,25 +111,3 @@ form{
 </style>
 
 </head>
-
-<!-- <body data-menu-position="closed" id="bd">
-<div style="position: relative; left: 0px;" class="jPanelMenu-panel"><div><div id="pp-wrapper">
-<a id="top"></a>
-	<header>
-		<div class="header shadow3">
-		<div class="container">
-			<div class="row-fluid">
-				<h2 id="pp-logo" class="span3">
-                	<a href="https://www.pesapal.com/"><span>Pesapal</span></a>
-            	</h2>
-				<div class="span4 offset1">
-					
-				</div>				
-			</div>
-		</div>
-	</div>
-	</header>
-	<section id="main">
-        <div id="pp-main">
-		    <div id="pp-content" class="">
-    	        <div class="container "> -->
